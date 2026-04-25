@@ -1218,3 +1218,22 @@ body::after {
   border-radius: 50% !important;
 }
 
+
+/* Final Contact Alignment Fix */
+.contact-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1.5rem !important;
+  margin-top: 2.5rem !important;
+  width: 100% !important;
+}
+.btn-contact {
+  margin: 0 !important;
+}
+.btn-social-premium {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
