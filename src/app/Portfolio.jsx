@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
-import { ExternalLink, Mail, ChevronRight, ArrowUpRight, Menu, X, Palette, FileText, User, Sparkles } from 'lucide-react';
+import { ExternalLink, Mail, ChevronRight, ArrowUpRight, Menu, X, Palette, FileText, User, Sparkles, Linkedin } from 'lucide-react';
 import data from '../data/portfolio.json';
 
 /* ======================================
@@ -571,19 +571,19 @@ const ContactSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="contact-content">
+          <div className="contact-content text-center">
             <span className="contact-eyebrow">Let's Create</span>
             <h2 className="contact-title">Ready to<br /><em>Collaborate?</em></h2>
-            <p className="contact-desc">
+            <p className="contact-desc mx-auto">
               Whether you have a design project or an investigative piece in mind,
               let&apos;s build something that makes an impact.
             </p>
-            <div className="contact-actions">
+            <div className="contact-actions flex justify-center gap-6">
               <MagneticButton onClick={() => window.location.href = `mailto:${data.profile.email}`} className="btn-contact">
                 <Mail size={22} /> Get in Touch
               </MagneticButton>
               <MagneticButton href={data.profile.linkedin} className="btn-social-premium">
-                <User size={28} />
+                <Linkedin size={28} />
               </MagneticButton>
             </div>
           </div>

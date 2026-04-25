@@ -1183,3 +1183,38 @@ body::after {
 }
 .availability-dot { background: #2dd4bf !important; box-shadow: 0 0 10px #2dd4bf; }
 .contact-footer-note { color: rgba(255, 255, 255, 0.4) !important; }
+
+/* Refined Contact Alignment */
+.contact-card {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.contact-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.contact-desc {
+  margin: 0 auto 3rem auto !important;
+}
+.contact-actions {
+  justify-content: center !important;
+  width: 100% !important;
+}
+.contact-footer-note {
+  justify-content: center !important;
+  margin-top: 4rem !important;
+  width: 100% !important;
+}
+.btn-social-premium {
+  width: 56px !important;
+  height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+}
+
