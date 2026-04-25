@@ -2,8 +2,29 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
-import { ExternalLink, Mail, ChevronRight, ArrowUpRight, Menu, X, Palette, FileText, User, Sparkles, Linkedin } from 'lucide-react';
+import { ExternalLink, Mail, ChevronRight, ArrowUpRight, Menu, X, Palette, FileText, User, Sparkles } from 'lucide-react';
 import data from '../data/portfolio.json';
+
+/* ======================================
+   CUSTOM ICONS
+  ====================================== */
+const LinkedInIcon = ({ size = 24 }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
 
 /* ======================================
    SMART UTILITIES (Magnetic & Tilt)
@@ -583,7 +604,7 @@ const ContactSection = () => {
                 <Mail size={22} /> Get in Touch
               </MagneticButton>
               <MagneticButton href={data.profile.linkedin} className="btn-social-premium">
-                <Linkedin size={28} />
+                <LinkedInIcon size={28} />
               </MagneticButton>
             </div>
           </div>
