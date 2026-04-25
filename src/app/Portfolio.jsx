@@ -139,6 +139,20 @@ const Navbar = () => {
 /* ======================================
    HERO
 ====================================== */
+const SectionMotionGraphic = () => (
+  <div className="section-motion-graphic">
+    <div className="section-mesh" />
+    <motion.div 
+      className="section-glow"
+      animate={{
+        scale: [1, 1.2, 1],
+        opacity: [0.1, 0.2, 0.1],
+      }}
+      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+    />
+  </div>
+);
+
 const Hero = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   
@@ -380,13 +394,18 @@ const ProjectCard = ({ project }) => {
    WORK SECTION
 ====================================== */
 const WorkSection = () => (
-  <section id="work" className="section">
-    <div className="container">
+  <section id="work" className="section relative">
+    <SectionMotionGraphic />
+    <div className="container relative z-10">
       <div className="work-header">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
           <span className="section-eyebrow">Portfolio</span>
           <h2 className="section-title">Selected<br /><em>Design Works</em></h2>
-        </div>
+        </motion.div>
       </div>
       <div className="portfolio-grid">
         {data.projects.map(project => (
@@ -401,16 +420,27 @@ const WorkSection = () => (
    WRITING SECTION
 ====================================== */
 const WritingSection = () => (
-  <section id="writing" className="section section-alt">
-    <div className="container">
+  <section id="writing" className="section section-alt relative">
+    <SectionMotionGraphic />
+    <div className="container relative z-10">
       <div className="writing-header">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
           <span className="section-eyebrow">Journalism &amp; Analysis</span>
           <h2 className="section-title">Writing &amp;<br /><em>Reporting</em></h2>
-        </div>
-        <p className="writing-header-desc">
+        </motion.div>
+        <motion.p 
+          className="writing-header-desc"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+        >
           Investigative pieces and editorial features focused on design, urbanism, and technology.
-        </p>
+        </motion.p>
       </div>
 
       <div className="writing-list">
@@ -445,29 +475,46 @@ const WritingSection = () => (
    ABOUT SECTION
 ====================================== */
 const AboutSection = () => (
-  <section id="about" className="section">
-    <div className="container">
+  <section id="about" className="section relative">
+    <SectionMotionGraphic />
+    <div className="container relative z-10">
       <div className="about-grid">
         {/* Experience */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
           <h2 className="about-title">
             Building Narratives<br />Through <em>Visuals</em>
           </h2>
           <div className="exp-list">
-            {data.profile.experience.map(exp => (
-              <div key={exp.company} className="exp-item">
+            {data.profile.experience.map((exp, i) => (
+              <motion.div 
+                key={exp.company} 
+                className="exp-item"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
                 <span className="exp-period">{exp.period}</span>
                 <h4 className="exp-company">{exp.company}</h4>
                 <p className="exp-role">{exp.role}</p>
                 <p className="exp-desc">{exp.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Skills */}
         <div className="skills-grid">
-          <div className="skill-card">
+          <motion.div 
+            className="skill-card"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+          >
             <h3 className="skill-card-title">
               <Palette size={20} /> Design Expertise
             </h3>
@@ -476,9 +523,15 @@ const AboutSection = () => (
                 <span key={s} className="skill-tag">{s}</span>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="skill-card">
+          <motion.div 
+            className="skill-card"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
             <h3 className="skill-card-title">
               <FileText size={20} /> Writing & Reporting
             </h3>
@@ -498,7 +551,7 @@ const AboutSection = () => (
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
