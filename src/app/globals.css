@@ -1119,3 +1119,67 @@ body::after {
 .tools-label { color: rgba(255, 255, 255, 0.4) !important; }
 .tool-item { color: rgba(255, 255, 255, 0.6) !important; }
 .section-about .section-eyebrow { color: #2dd4bf !important; }
+
+/* ==================== CONTACT SECTION MOTION GRAPHICS ==================== */
+.contact-section {
+  background-color: #050505 !important;
+  position: relative;
+  overflow: hidden;
+  color: #fff !important;
+  padding: 10rem 0;
+  border-radius: 60px 60px 0 0;
+  margin-top: -40px;
+  z-index: 20;
+}
+.contact-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.15), transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 1;
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(20px);
+  padding: 6rem !important;
+  border-radius: 40px !important;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(45, 212, 191, 0.05), transparent);
+  opacity: 0.5;
+}
+.contact-title { color: #fff !important; font-size: clamp(2.5rem, 6vw, 5rem) !important; }
+.contact-title em { color: #2dd4bf !important; }
+.contact-desc { color: rgba(255, 255, 255, 0.6) !important; max-width: 500px !important; font-size: 1.1rem !important; }
+.btn-contact {
+  background: #2dd4bf !important;
+  color: #050505 !important;
+  font-weight: 700 !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 99px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  transition: all 0.3s ease !important;
+}
+.btn-contact:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(45, 212, 191, 0.3);
+}
+.btn-social-premium {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.availability-dot { background: #2dd4bf !important; box-shadow: 0 0 10px #2dd4bf; }
+.contact-footer-note { color: rgba(255, 255, 255, 0.4) !important; }
