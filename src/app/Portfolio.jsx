@@ -459,8 +459,28 @@ const WritingSection = () => (
    ABOUT SECTION
 ====================================== */
 const AboutSection = () => (
-  <section id="about" className="section">
-    <div className="container">
+  <section id="about" className="section section-about">
+    {/* Magnetic Motion Graphic Background */}
+    <div className="about-motion-bg">
+      <motion.div 
+        className="about-glow-1"
+        animate={{
+          x: [0, 50, 0],
+          y: [0, 30, 0],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div 
+        className="about-glow-2"
+        animate={{
+          x: [0, -40, 0],
+          y: [0, 60, 0],
+        }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+      />
+    </div>
+
+    <div className="container relative z-10">
       <div className="about-grid">
         {/* Experience */}
         <div>

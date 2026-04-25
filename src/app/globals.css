@@ -1066,3 +1066,56 @@ body::after {
   transform: scale(1.1) rotate(45deg);
 }
 .writing-header-desc { color: rgba(255, 255, 255, 0.7) !important; max-width: 600px; }
+
+/* ==================== ABOUT SECTION MOTION GRAPHICS ==================== */
+.section-about {
+  background-color: #080808 !important;
+  position: relative;
+  overflow: hidden;
+  color: #fff !important;
+}
+.about-motion-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.about-glow-1 {
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(0, 137, 123, 0.1), transparent 70%);
+  filter: blur(80px);
+}
+.about-glow-2 {
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08), transparent 70%);
+  filter: blur(100px);
+}
+.section-about .about-title { color: #fff !important; }
+.section-about .about-title em { color: #2dd4bf !important; }
+.exp-company { color: #fff !important; }
+.exp-period { color: #2dd4bf !important; }
+.exp-role { color: rgba(255, 255, 255, 0.6) !important; }
+.exp-desc { color: rgba(255, 255, 255, 0.5) !important; }
+.exp-item { border-left: 3px solid #2dd4bf !important; }
+.skill-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+}
+.skill-card-title { color: #fff !important; }
+.skill-tag {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.tools-label { color: rgba(255, 255, 255, 0.4) !important; }
+.tool-item { color: rgba(255, 255, 255, 0.6) !important; }
+.section-about .section-eyebrow { color: #2dd4bf !important; }
