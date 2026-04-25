@@ -1,0 +1,190 @@
+{
+  "profile": {
+    "name": "Newaz Nezif",
+    "role": "Multidisciplinary Creative",
+    "bio": "Specializing in graphic design, investigative reporting, and visual storytelling. I bridge the gap between complex data and compelling human narratives through editorial design and rigorous research.",
+    "email": "newaz.nezif@example.com",
+    "linkedin": "https://linkedin.com/in/newaznezif",
+    "experience": [
+      {
+        "company": "Cava",
+        "role": "Lead Visual Storyteller",
+        "period": "2022 - Present",
+        "description": "Redesigned internal reporting frameworks and customer-facing visual communications."
+      },
+      {
+        "company": "The Daily Chronicle",
+        "role": "Editorial Designer & Reporter",
+        "period": "2020 - 2022",
+        "description": "Produced long-form investigative reports with integrated data visualizations."
+      }
+    ],
+    "skills": {
+      "design": [
+        "Editorial Design",
+        "Brand Identity",
+        "Data Visualization",
+        "Layout Design"
+      ],
+      "writing": [
+        "Investigative Reporting",
+        "Copywriting",
+        "Technical Writing",
+        "Creative Storytelling"
+      ],
+      "tools": [
+        "Canva",
+        "Adobe Creative Suite",
+        "Figma",
+        "Notion",
+        "Procreate"
+      ]
+    }
+  },
+  "projects": [
+    {
+      "id": "work-01",
+      "title": "Visual Narrative I",
+      "category": "Graphic Design",
+      "description": "A deep dive into visual hierarchy and brand storytelling.",
+      "role": "Lead Designer",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Developed a unified visual language for high-impact communication.",
+      "canva_link": "https://canva.link/w7yxz8rmmzjk6lk",
+      "image": "/projects/work-01.png",
+      "featured": true
+    },
+    {
+      "id": "work-02",
+      "title": "Editorial Campaign II",
+      "category": "Layout Design",
+      "description": "Exploration of editorial grids and modern typography.",
+      "role": "Art Director",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Optimized layout for readability and engagement across digital platforms.",
+      "canva_link": "https://canva.link/r2akdlsl55qu3ao",
+      "image": "/projects/work-02.png",
+      "featured": true
+    },
+    {
+      "id": "work-03",
+      "title": "Identity System III",
+      "category": "Branding",
+      "description": "Comprehensive identity design for a contemporary initiative.",
+      "role": "Graphic Designer",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Established a cohesive brand presence through modular design elements.",
+      "canva_link": "https://canva.link/5yljzc6fhcthmte",
+      "image": "/projects/work-03.png",
+      "featured": true
+    },
+    {
+      "id": "work-04",
+      "title": "Digital Storytelling IV",
+      "category": "Visual Design",
+      "description": "Interactive visual storytelling focusing on community impact.",
+      "role": "Visual Storyteller",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Created a high-engagement digital experience for social outreach.",
+      "canva_link": "https://canva.link/ywfpkzod67q3xuw",
+      "image": "/projects/work-04.png",
+      "featured": true
+    },
+    {
+      "id": "work-05",
+      "title": "Conceptual Design V",
+      "category": "Creative Direction",
+      "description": "Bold conceptual designs pushing the boundaries of traditional layouts.",
+      "role": "Creative Director",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Pioneered a new visual direction for investigative reporting.",
+      "canva_link": "https://canva.link/u3i319oi6m1eh9f",
+      "image": "/projects/work-05.png",
+      "featured": true
+    },
+    {
+      "id": "work-06",
+      "title": "Brand Evolution VI",
+      "category": "Graphic Design",
+      "description": "An iterative approach to brand evolution and visual consistency.",
+      "role": "Lead Designer",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Successfully transitioned the brand to a modern, minimalist aesthetic.",
+      "canva_link": "https://canva.link/iv95uo0gihkvm4o",
+      "image": "/projects/work-06.png",
+      "featured": true
+    },
+    {
+      "id": "work-07",
+      "title": "Social Impact VII",
+      "category": "Social Media",
+      "description": "High-impact social media assets designed for maximum reach.",
+      "role": "Visual Designer",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Achieved a 50% increase in social media engagement through targeted design.",
+      "canva_link": "https://canva.link/860ennxfgvn8jff",
+      "image": "/projects/work-07.png",
+      "featured": true
+    },
+    {
+      "id": "work-08",
+      "title": "Minimalist Vision VIII",
+      "category": "Editorial",
+      "description": "A masterclass in minimalist design and white space management.",
+      "role": "Art Director",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Reduced visual clutter and improved information hierarchy.",
+      "canva_link": "https://canva.link/2qwj3q6sidob05k",
+      "image": "/projects/work-08.png",
+      "featured": true
+    },
+    {
+      "id": "work-09",
+      "title": "Future Reporting IX",
+      "category": "Data Viz",
+      "description": "Visualizing complex reporting data for modern newsrooms.",
+      "role": "Editorial Designer",
+      "tools": [
+        "Canva"
+      ],
+      "outcome": "Transformed complex datasets into intuitive visual narratives.",
+      "canva_link": "https://canva.link/fuhy7px7d9wc7nb",
+      "image": "/projects/work-09.png",
+      "featured": true
+    }
+  ],
+  "writing": [
+    {
+      "id": "write-01",
+      "title": "The Silent Revolution: Urban Green Spaces",
+      "type": "Investigative Report",
+      "excerpt": "How neglected lots in industrial zones are becoming the backbone of city climate resilience. An in-depth analysis of municipal data and community impact.",
+      "link": "#",
+      "date": "Oct 2023"
+    },
+    {
+      "id": "write-02",
+      "title": "Design Systems in the Newsroom",
+      "type": "Article",
+      "excerpt": "Exploring why modern reporting requires a visual language as rigorous as the journalism itself. A look into the future of editorial tools.",
+      "link": "#",
+      "date": "Aug 2023"
+    }
+  ]
+}
