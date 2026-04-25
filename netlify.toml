@@ -4,3 +4,8 @@
 
 [build.environment]
   NETLIFY_SKIP_NEXTJS_PLUGIN = "true"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "script-src 'self' 'unsafe-eval' 'unsafe-inline' blob:; frame-src 'self' https://www.canva.com; img-src 'self' data: blob: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com;"
