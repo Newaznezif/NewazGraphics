@@ -402,7 +402,21 @@ const WorkSection = () => (
 ====================================== */
 const WritingSection = () => (
   <section id="writing" className="section section-alt">
-    <div className="container">
+    {/* Analytical Motion Graphic Background */}
+    <div className="writing-motion-bg">
+      <div className="analytical-grid" />
+      <motion.div 
+        className="writing-blob"
+        animate={{
+          scale: [1, 1.1, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <div className="typo-pattern">JOURNALISM ANALYSIS REPORTING RESEARCH DATA JOURNALISM ANALYSIS REPORTING RESEARCH DATA</div>
+    </div>
+
+    <div className="container relative z-10">
       <div className="writing-header">
         <div>
           <span className="section-eyebrow">Journalism &amp; Analysis</span>
