@@ -183,14 +183,14 @@ const Hero = () => {
       data.projects.forEach((project, index) => {
         const imgUrl = window.location.origin + project.image;
         
-        // Force a new page for every image except the first one
-        const pageBreak = index > 0 ? '<div class="html2pdf__page-break"></div>' : '';
+        // Force a new page only after every two images
+        const pageBreak = (index > 0 && index % 2 === 0) ? '<div class="html2pdf__page-break"></div>' : '';
         
         contentHtml += `
           ${pageBreak}
-          <div style="padding: 40px; text-align: center; height: 1050px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
-            <img src="${imgUrl}" style="max-width: 100%; max-height: 850px; border-radius: 16px; margin-bottom: 30px; display: block; object-fit: contain;" crossorigin="anonymous" />
-            <h2 style="font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
+          <div style="padding: 20px 40px; text-align: center; height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
+            <img src="${imgUrl}" style="max-width: 100%; max-height: 400px; border-radius: 12px; margin-bottom: 16px; display: block; object-fit: contain;" crossorigin="anonymous" />
+            <h2 style="font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
           </div>
         `;
       });
