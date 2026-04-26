@@ -177,23 +177,25 @@ const Hero = () => {
       const html2pdf = (await import('html2pdf.js')).default;
       
       let contentHtml = `
-        <div style="width: 800px; padding: 40px; background: #ffffff; color: #000000;">
-          <div style="display: flex; flex-direction: column; gap: 60px;">
+        <div style="width: 800px; background: #ffffff; color: #000000;">
       `;
       
-      data.projects.forEach(project => {
-        // Use absolute URL to prevent 404s in html2canvas iframe
+      data.projects.forEach((project, index) => {
         const imgUrl = window.location.origin + project.image;
+        
+        // Force a new page for every image except the first one
+        const pageBreak = index > 0 ? '<div class="html2pdf__page-break"></div>' : '';
+        
         contentHtml += `
-          <div style="text-align: center; page-break-inside: avoid; margin-bottom: 40px;">
-            <img src="${imgUrl}" style="max-width: 100%; border-radius: 16px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" crossorigin="anonymous" />
+          ${pageBreak}
+          <div style="padding: 40px; text-align: center; height: 1050px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
+            <img src="${imgUrl}" style="max-width: 100%; max-height: 850px; border-radius: 16px; margin-bottom: 30px; display: block; object-fit: contain;" crossorigin="anonymous" />
             <h2 style="font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
           </div>
         `;
       });
       
       contentHtml += `
-          </div>
         </div>
       `;
       
