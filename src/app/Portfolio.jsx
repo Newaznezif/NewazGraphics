@@ -188,9 +188,9 @@ const Hero = () => {
         
         contentHtml += `
           ${pageBreak}
-          <div style="padding: 20px 40px; text-align: center; height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
-            <img src="${imgUrl}" style="max-width: 100%; max-height: 400px; border-radius: 12px; margin-bottom: 16px; display: block; object-fit: contain;" crossorigin="anonymous" />
-            <h2 style="font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
+          <div style="padding: 20px 40px 40px 40px; text-align: center; box-sizing: border-box;">
+            <img src="${imgUrl}" style="max-width: 100%; max-height: 420px; border-radius: 12px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; object-fit: contain;" crossorigin="anonymous" />
+            <h2 style="font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
           </div>
         `;
       });
