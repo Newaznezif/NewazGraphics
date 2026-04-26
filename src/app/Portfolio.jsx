@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'framer-motion';
-import { ExternalLink, Mail, ChevronRight, ArrowUpRight, Menu, X, Palette, FileText, User, Sparkles } from 'lucide-react';
+import { ExternalLink, Mail, ChevronRight, ArrowUpRight, Menu, X, Palette, FileText, User, Sparkles, Download } from 'lucide-react';
 import data from '../data/portfolio.json';
 
 /* ======================================
@@ -162,12 +162,36 @@ const Navbar = () => {
 ====================================== */
 const Hero = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isDownloading, setIsDownloading] = useState(false);
   
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     const x = (clientX / window.innerWidth - 0.5) * 50;
     const y = (clientY / window.innerHeight - 0.5) * 50;
     setMousePos({ x, y });
+  };
+
+  const handleDownloadPDF = async () => {
+    setIsDownloading(true);
+    try {
+      const element = document.getElementById('work');
+      if (!element) return;
+      
+      const html2pdf = (await import('html2pdf.js')).default;
+      const opt = {
+        margin:       0.5,
+        filename:     'NewazNezif_DesignWorks.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      
+      await html2pdf().from(element).set(opt).save();
+    } catch (error) {
+      console.error("PDF generation failed", error);
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   const blobs = Array.from({ length: 6 });
@@ -233,6 +257,9 @@ const Hero = () => {
               </MagneticButton>
               <MagneticButton href="#contact" className="btn-super-outline">
                 Let&apos;s Connect
+              </MagneticButton>
+              <MagneticButton onClick={handleDownloadPDF} className="btn-super-outline">
+                {isDownloading ? "Generating PDF..." : "Download Works"} <Download size={18} style={{ marginLeft: '8px' }} />
               </MagneticButton>
             </div>
           </div>
