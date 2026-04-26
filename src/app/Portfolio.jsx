@@ -176,10 +176,13 @@ const Hero = () => {
     try {
       const html2pdf = (await import('html2pdf.js')).default;
       
-      // Create a clean, hidden container just for the PDF
       const printContainer = document.createElement('div');
+      printContainer.style.position = 'absolute';
+      printContainer.style.top = '0';
+      printContainer.style.left = '0';
+      printContainer.style.zIndex = '-9999';
       printContainer.style.width = '800px';
-      printContainer.style.background = '#ffffff'; // White background for clean PDF
+      printContainer.style.background = '#ffffff'; 
       printContainer.style.padding = '40px';
       
       let contentHtml = '<div style="display: flex; flex-direction: column; gap: 60px;">';
@@ -187,7 +190,7 @@ const Hero = () => {
       data.projects.forEach(project => {
         contentHtml += `
           <div style="text-align: center; page-break-inside: avoid; margin-bottom: 40px;">
-            <img src="${project.image}" style="max-width: 100%; border-radius: 16px; margin-bottom: 20px;" />
+            <img src="${project.image}" style="max-width: 100%; border-radius: 16px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
             <h2 style="font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
           </div>
         `;
@@ -195,24 +198,28 @@ const Hero = () => {
       
       contentHtml += '</div>';
       printContainer.innerHTML = contentHtml;
-      
-      // Temporarily append to body (hidden) so html2canvas can render the images
-      printContainer.style.position = 'absolute';
-      printContainer.style.left = '-9999px';
-      printContainer.style.top = '0';
       document.body.appendChild(printContainer);
+      
+      // Wait for all images to fully load before capturing
+      const images = Array.from(printContainer.getElementsByTagName('img'));
+      await Promise.all(images.map(img => {
+        if (img.complete) return Promise.resolve();
+        return new Promise((resolve) => {
+          img.onload = resolve;
+          img.onerror = resolve; 
+        });
+      }));
       
       const opt = {
         margin:       0.5,
         filename:     'NewazNezif_SelectedWorks.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, logging: false },
+        html2canvas:  { scale: 2, useCORS: true, logging: false, windowWidth: 800 },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
       
       await html2pdf().from(printContainer).set(opt).save();
       
-      // Cleanup
       document.body.removeChild(printContainer);
     } catch (error) {
       console.error("PDF generation failed", error);
