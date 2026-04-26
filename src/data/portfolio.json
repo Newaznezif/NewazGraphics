@@ -44,126 +44,126 @@
   "projects": [
     {
       "id": "work-01",
-      "title": "Visual Narrative I",
+      "title": "Computer Networking Book Coverpage",
       "category": "Graphic Design",
-      "description": "A deep dive into visual hierarchy and brand storytelling.",
+      "description": "A professional architectural book cover designed for 'Computer Networking: From Zero to Hero'. The design focuses on bold, red-and-black typography to establish authority, while a clean, structural layout ensures clarity for educational materials and online seminars.",
       "role": "Lead Designer",
       "tools": [
         "Canva"
       ],
-      "outcome": "Developed a unified visual language for high-impact communication.",
+      "outcome": "Created a high-impact visual identity for a networking education series, improving brand recognition across digital and print mediums.",
       "canva_link": "https://canva.link/w7yxz8rmmzjk6lk",
       "image": "/projects/work-01.png",
       "featured": true
     },
     {
       "id": "work-02",
-      "title": "Editorial Campaign II",
+      "title": "Educational Promotional Content",
       "category": "Layout Design",
-      "description": "Exploration of editorial grids and modern typography.",
+      "description": "A high-conversion social media promotional graphic designed for 'EU Online School'. The layout features a 50% discount badge and a comprehensive list of academic services (Thesis, Research, Proposals), using playful illustrations and a structured grid to engage students and researchers across digital platforms.",
       "role": "Art Director",
       "tools": [
         "Canva"
       ],
-      "outcome": "Optimized layout for readability and engagement across digital platforms.",
+      "outcome": "Developed a visually striking promotional campaign that increased lead generation for academic support services.",
       "canva_link": "https://canva.link/r2akdlsl55qu3ao",
       "image": "/projects/work-02.png",
       "featured": true
     },
     {
       "id": "work-03",
-      "title": "Identity System III",
+      "title": "Company Logo",
       "category": "Branding",
-      "description": "Comprehensive identity design for a contemporary initiative.",
+      "description": "A modern, dynamic visual identity designed for 'Borcelle Company'. The logo features a stylized, sweeping circular emblem in corporate blue and energetic orange, symbolizing motion, connectivity, and forward-thinking growth. The clean sans-serif typography ensures strong brand presence across all corporate applications.",
       "role": "Graphic Designer",
       "tools": [
         "Canva"
       ],
-      "outcome": "Established a cohesive brand presence through modular design elements.",
+      "outcome": "Developed a versatile brand mark that unified the company's digital and print communication channels.",
       "canva_link": "https://canva.link/5yljzc6fhcthmte",
       "image": "/projects/work-03.png",
       "featured": true
     },
     {
       "id": "work-04",
-      "title": "Digital Storytelling IV",
+      "title": "Shield Security",
       "category": "Visual Design",
-      "description": "Interactive visual storytelling focusing on community impact.",
+      "description": "A minimalist, high-impact brand identity for 'Shield Security'. The logo employs a geometric shield emblem composed of clean, intersecting lines in a bold crimson hue, representing structural integrity and modern defense. This case study explores the visual evolution of the mark and its application across security-focused digital interfaces.",
       "role": "Visual Storyteller",
       "tools": [
         "Canva"
       ],
-      "outcome": "Created a high-engagement digital experience for social outreach.",
+      "outcome": "Designed a robust visual system that conveys trust and safety, tailored for the modern cybersecurity sector.",
       "canva_link": "https://canva.link/ywfpkzod67q3xuw",
       "image": "/projects/work-04.png",
       "featured": true
     },
     {
       "id": "work-05",
-      "title": "Conceptual Design V",
+      "title": "Educational Promotional Content",
       "category": "Creative Direction",
-      "description": "Bold conceptual designs pushing the boundaries of traditional layouts.",
+      "description": "A comprehensive promotional flyer for the 'Cyber Security & Hacking Course' by ZareCyber Guard. This design utilizes a high-density information layout to showcase course modules—including networking basics, social engineering, and cloud security—while using cyber-themed iconography and a 50% discount call-to-action to drive student enrollment.",
       "role": "Creative Director",
       "tools": [
         "Canva"
       ],
-      "outcome": "Pioneered a new visual direction for investigative reporting.",
+      "outcome": "Developed an information-rich promotional asset that successfully communicated complex course details in a visually engaging format.",
       "canva_link": "https://canva.link/u3i319oi6m1eh9f",
       "image": "/projects/work-05.png",
       "featured": true
     },
     {
       "id": "work-06",
-      "title": "Brand Evolution VI",
+      "title": "Youth Logo",
       "category": "Graphic Design",
-      "description": "An iterative approach to brand evolution and visual consistency.",
+      "description": "A minimalist and symbolic logo designed for a youth-focused initiative. The mark features a nautical anchor combined with a golden sunburst/crown element, representing stability, hope, and the rising potential of the next generation. The design uses traditional Ge'ez typography to ground the brand in its cultural heritage while maintaining a modern, clean aesthetic.",
       "role": "Lead Designer",
       "tools": [
         "Canva"
       ],
-      "outcome": "Successfully transitioned the brand to a modern, minimalist aesthetic.",
+      "outcome": "Created a timeless cultural emblem that resonates with youth while honoring traditional roots.",
       "canva_link": "https://canva.link/iv95uo0gihkvm4o",
       "image": "/projects/work-06.png",
       "featured": true
     },
     {
       "id": "work-07",
-      "title": "Social Impact VII",
+      "title": "Event Posts",
       "category": "Social Media",
-      "description": "High-impact social media assets designed for maximum reach.",
+      "description": "A vibrant social media campaign designed for 'International Wellness Day' by the Melhiq team. The design uses a soft, empowering palette of pinks and deep blues, featuring clean line-art illustrations and minimalist typography to promote mental health awareness and community engagement across Instagram and Facebook.",
       "role": "Visual Designer",
       "tools": [
         "Canva"
       ],
-      "outcome": "Achieved a 50% increase in social media engagement through targeted design.",
+      "outcome": "Crafted a cohesive visual story that drove record engagement for a global awareness initiative.",
       "canva_link": "https://canva.link/860ennxfgvn8jff",
       "image": "/projects/work-07.png",
       "featured": true
     },
     {
       "id": "work-08",
-      "title": "Minimalist Vision VIII",
+      "title": "Advertisment Post",
       "category": "Editorial",
-      "description": "A masterclass in minimalist design and white space management.",
+      "description": "An official launch advertisement for the 'YAC' initiative by Melhiq Communication Team. The design uses high-energy orange accents and bold, declarative typography ('Official Launch', 'Youth Voices. Real Impact.') to announce the project's commencement. Featuring custom illustrations of youth activists, the post is engineered for social mobilization and brand awareness.",
       "role": "Art Director",
       "tools": [
         "Canva"
       ],
-      "outcome": "Reduced visual clutter and improved information hierarchy.",
+      "outcome": "Created a bold, mobilization-focused campaign that successfully launched a major youth initiative.",
       "canva_link": "https://canva.link/2qwj3q6sidob05k",
       "image": "/projects/work-08.png",
       "featured": true
     },
     {
       "id": "work-09",
-      "title": "Future Reporting IX",
-      "category": "Data Viz",
-      "description": "Visualizing complex reporting data for modern newsrooms.",
-      "role": "Editorial Designer",
+      "title": "Early Gasha",
+      "category": "Branding",
+      "description": "A powerful heraldic logo designed for 'Early Gasha', a startup specialized in Humanitarian AI Risk Prediction. The mark combines a traditional shield and eagle (symbolizing vigilance and protection) with a central CPU/circuit element, representing the integration of cutting-edge artificial intelligence in mitigating global humanitarian risks. The monochromatic palette emphasizes authority, intelligence, and unwavering security.",
+      "role": "Lead Designer",
       "tools": [
         "Canva"
       ],
-      "outcome": "Transformed complex datasets into intuitive visual narratives.",
+      "outcome": "Established a strong, authoritative brand identity for a high-tech humanitarian startup, bridging the gap between tradition and innovation.",
       "canva_link": "https://canva.link/fuhy7px7d9wc7nb",
       "image": "/projects/work-09.png",
       "featured": true
