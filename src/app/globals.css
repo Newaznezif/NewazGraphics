@@ -1126,7 +1126,7 @@ body::after {
   position: relative;
   overflow: hidden;
   color: #fff !important;
-  padding: 10rem 0;
+  padding: 5rem 0;
   border-radius: 60px 60px 0 0;
   margin-top: -40px;
   z-index: 20;
@@ -1145,7 +1145,7 @@ body::after {
   background: rgba(255, 255, 255, 0.02) !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(20px);
-  padding: 6rem !important;
+  padding: 4rem 3rem !important;
   border-radius: 40px !important;
   position: relative;
   z-index: 10;
@@ -1182,7 +1182,14 @@ body::after {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 .availability-dot { background: #2dd4bf !important; box-shadow: 0 0 10px #2dd4bf; }
-.contact-footer-note { color: rgba(255, 255, 255, 0.4) !important; }
+.contact-footer-note { 
+  color: rgba(255, 255, 255, 0.4) !important;
+  margin-top: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+}
 
 /* Refined Contact Alignment */
 .contact-card {
