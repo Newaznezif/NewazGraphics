@@ -174,19 +174,46 @@ const Hero = () => {
   const handleDownloadPDF = async () => {
     setIsDownloading(true);
     try {
-      const element = document.getElementById('work');
-      if (!element) return;
-      
       const html2pdf = (await import('html2pdf.js')).default;
+      
+      // Create a clean, hidden container just for the PDF
+      const printContainer = document.createElement('div');
+      printContainer.style.width = '800px';
+      printContainer.style.background = '#ffffff'; // White background for clean PDF
+      printContainer.style.padding = '40px';
+      
+      let contentHtml = '<div style="display: flex; flex-direction: column; gap: 60px;">';
+      
+      data.projects.forEach(project => {
+        contentHtml += `
+          <div style="text-align: center; page-break-inside: avoid; margin-bottom: 40px;">
+            <img src="${project.image}" style="max-width: 100%; border-radius: 16px; margin-bottom: 20px;" />
+            <h2 style="font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
+          </div>
+        `;
+      });
+      
+      contentHtml += '</div>';
+      printContainer.innerHTML = contentHtml;
+      
+      // Temporarily append to body (hidden) so html2canvas can render the images
+      printContainer.style.position = 'absolute';
+      printContainer.style.left = '-9999px';
+      printContainer.style.top = '0';
+      document.body.appendChild(printContainer);
+      
       const opt = {
         margin:       0.5,
-        filename:     'NewazNezif_DesignWorks.pdf',
+        filename:     'NewazNezif_SelectedWorks.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
+        html2canvas:  { scale: 2, useCORS: true, logging: false },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
       
-      await html2pdf().from(element).set(opt).save();
+      await html2pdf().from(printContainer).set(opt).save();
+      
+      // Cleanup
+      document.body.removeChild(printContainer);
     } catch (error) {
       console.error("PDF generation failed", error);
     } finally {
