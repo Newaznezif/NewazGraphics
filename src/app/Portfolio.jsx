@@ -176,51 +176,37 @@ const Hero = () => {
     try {
       const html2pdf = (await import('html2pdf.js')).default;
       
-      const printContainer = document.createElement('div');
-      printContainer.style.position = 'absolute';
-      printContainer.style.top = '0';
-      printContainer.style.left = '0';
-      printContainer.style.zIndex = '-9999';
-      printContainer.style.width = '800px';
-      printContainer.style.background = '#ffffff'; 
-      printContainer.style.padding = '40px';
-      
-      let contentHtml = '<div style="display: flex; flex-direction: column; gap: 60px;">';
+      let contentHtml = `
+        <div style="width: 800px; padding: 40px; background: #ffffff; color: #000000;">
+          <div style="display: flex; flex-direction: column; gap: 60px;">
+      `;
       
       data.projects.forEach(project => {
+        // Use absolute URL to prevent 404s in html2canvas iframe
+        const imgUrl = window.location.origin + project.image;
         contentHtml += `
           <div style="text-align: center; page-break-inside: avoid; margin-bottom: 40px;">
-            <img src="${project.image}" style="max-width: 100%; border-radius: 16px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" />
+            <img src="${imgUrl}" style="max-width: 100%; border-radius: 16px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;" crossorigin="anonymous" />
             <h2 style="font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; margin: 0; color: #111;">${project.title}</h2>
           </div>
         `;
       });
       
-      contentHtml += '</div>';
-      printContainer.innerHTML = contentHtml;
-      document.body.appendChild(printContainer);
-      
-      // Wait for all images to fully load before capturing
-      const images = Array.from(printContainer.getElementsByTagName('img'));
-      await Promise.all(images.map(img => {
-        if (img.complete) return Promise.resolve();
-        return new Promise((resolve) => {
-          img.onload = resolve;
-          img.onerror = resolve; 
-        });
-      }));
+      contentHtml += `
+          </div>
+        </div>
+      `;
       
       const opt = {
         margin:       0.5,
         filename:     'NewazNezif_SelectedWorks.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, logging: false, windowWidth: 800 },
+        html2canvas:  { scale: 2, useCORS: true, letterRendering: true, windowWidth: 800 },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
       
-      await html2pdf().from(printContainer).set(opt).save();
+      await html2pdf().set(opt).from(contentHtml).save();
       
-      document.body.removeChild(printContainer);
     } catch (error) {
       console.error("PDF generation failed", error);
     } finally {
