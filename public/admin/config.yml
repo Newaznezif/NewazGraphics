@@ -1,0 +1,77 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/projects"
+public_folder: "/projects"
+
+collections:
+  - name: "portfolio_data"
+    label: "Portfolio Content"
+    files:
+      - label: "Portfolio Data"
+        name: "data"
+        file: "src/data/portfolio.json"
+        fields:
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Bio", name: "bio", widget: "text"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+              - label: "Experience"
+                name: "experience"
+                widget: "list"
+                fields:
+                  - {label: "Company", name: "company", widget: "string"}
+                  - {label: "Role", name: "role", widget: "string"}
+                  - {label: "Period", name: "period", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+              - label: "Skills"
+                name: "skills"
+                widget: "object"
+                fields:
+                  - label: "Design Expertise"
+                    name: "design"
+                    widget: "list"
+                    field: {label: "Skill", name: "skill", widget: "string"}
+                  - label: "Writing & Reporting"
+                    name: "writing"
+                    widget: "list"
+                    field: {label: "Skill", name: "skill", widget: "string"}
+                  - label: "Tech Stack"
+                    name: "tools"
+                    widget: "list"
+                    field: {label: "Tool", name: "tool", widget: "string"}
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Role", name: "role", widget: "string"}
+              - label: "Tools"
+                name: "tools"
+                widget: "list"
+                field: {label: "Tool", name: "tool", widget: "string"}
+              - {label: "Outcome", name: "outcome", widget: "string"}
+              - {label: "Canva Link", name: "canva_link", widget: "string", required: false}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Featured", name: "featured", widget: "boolean"}
+          - label: "Writing & Reporting"
+            name: "writing"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Type", name: "type", widget: "string"}
+              - {label: "Excerpt", name: "excerpt", widget: "text"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
